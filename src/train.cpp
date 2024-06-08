@@ -17,7 +17,7 @@ void Train::addCage(bool light) {
     Cage* last = first->prev; // находим последний вагон
     last->next = newCage;
     newCage->prev = last;
-    newCage->next = first;  // связываем новый вагон со первым (замыкаем поезд по окружности)
+    newCage->next = first;  // (замыкаем поезд по окружности)
     first->prev = newCage;  // обновляем указатель prev у первого вагона
   }
 }
